@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Sign In</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="box">
+                <h3>Form Sign In</h3>
+
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Masukkan Username">
+
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Masukkan Password">
+
+                <button id="signin">Sign In</button>
+
+                <p id="error"></p>
+            </div>
+
+        </div>
+
+        <script>
+
+        var btn = document.getElementById("signin");
+
+        btn.addEventListener("click", function(){
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var error = document.getElementById("error");
+
+            if(username === "" || password === ""){
+                error.innerHTML = "Username atau Password tidak boleh kosong";
+            }
+            else{
+                window.location.href = "https://www.instagram.com/_.jesmay/";
+            }
+
+        });
+
+    </script>
+    </body>
+</html>
